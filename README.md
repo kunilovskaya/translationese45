@@ -26,6 +26,7 @@ Each file contains a preprocessed and UD parsed text in the *.conllu format from
 ```
 python3 mega_collector.py
 ```
+The spreadsheet *our45features_extracted.tsv* has our output and is added for reference.
 
 
 
