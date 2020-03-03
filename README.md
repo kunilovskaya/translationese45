@@ -8,6 +8,13 @@ Related publication:
 LREC-2020, Marseille, May 11-15, 2020.*
 (link and bib to be added)
 
+In developing the extraction procedures and the related pre-defined lists of items, we roughly follow the suggestions by
+* for English: Nini, A. 2015. Multidimensional Analysis Tagger (Version 1.3) based on Biber, D. (1988). Variation across speech and writing (2nd ed.). Cambridge University Press, 
+* for German: Evert, S. and Neumann, S. (2017). The impact of translation direction on characteristics of translated texts : A
+multivariate analysis for English and German. Empirical Translation Studies: New Methodological and Theoreti-
+cal Traditions, 300:47. based on Neumann, S. (2013). Contrastive register variation. A quantitative approach to the comparison of English and German. Mouton de Gruyter, Berlin, Boston.
+* for Russian: Katinskaya, A. and Sharoff, S. (2015). Applying Multi-Dimensional Analysis to a Russian Webcorpus: Searching for Evidence of Genres. The 5th Workshop on Balto-Slavic Natural Language Processing, pages 65–74, September.
+
 The detailed description of the features is provided in *lrec20_45featureset_description.pdf*.
 
 To reproduce the extraction of frequencies for the 45 translationese features for the three languages:
