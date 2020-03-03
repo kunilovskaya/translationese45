@@ -19,9 +19,9 @@ The detailed description of the features is provided in *lrec20_45featureset_des
 
 To reproduce the extraction of frequencies for the 45 translationese features for the three languages:
 - clone the repository to your user's home directory (/home/username/);
-- unpack the data in the preprocessed folder; 
+- unpack the data in the preprocessed folder and delete the archives; 
 - change the username in rootdir option in the mega_collector.py;
-- adjust the output file name in mega_collector.py, if necessary. By default the output (out.tsv) is created in the same folder as the input data;
+- adjust the output file name in mega_collector.py, if necessary. By default the output (out.tsv) is created in the project rootdir;
 - change the username in lists_path in helpfunctions.py module. 
 
 The archives contain trees of folders for each language pair, including professional and student translations 
@@ -29,6 +29,10 @@ with their sources as well as the non-translated reference texts used. The folde
 Each file contains a preprocessed and UD parsed text in the *.conllu format from the respective subcorpus.
 
 - Install the necessary dependencies, specifically python igraph-python 0.7.4 library required to extract mean hierarchical distance
+
+``
+sudo apt-get install python3-igraph
+``
 - run
 ```
 python3 mega_collector.py

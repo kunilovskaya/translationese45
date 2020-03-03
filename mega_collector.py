@@ -3,10 +3,13 @@ produces a dictionary with each text values for each feature + a class value (ty
 the language index is taken from the folder name and needs to be set up accordingly
 '''
 import os, sys
+import csv
 from extractors import *
 
-rootdir = "/home/your_user_homedir/translationese45/preprocessed/"
+rootdir = "/home/youruser/translationese45/"
+data = rootdir + 'preprocessed'
 outname = rootdir + 'out.tsv'
+
 # here, for each file we collect counts averaged over number of words or number of sentences
 ## muted features: passives interrog andor wdlength mark nn
 keys = 'afile alang akorp astatus ' \
@@ -59,7 +62,7 @@ for l in languages:
 	print('==%s temporal/sequencial' % len(sequen[l]), file=sys.stderr)
 	print('==%s DM of epistemic stance' % len(epistem[l]), file=sys.stderr)
 	
-for subdir, dirs, files in os.walk(rootdir):
+for subdir, dirs, files in os.walk(data):
 	for i, file in enumerate(files):
 		
 		filepath = subdir + os.sep + file
@@ -69,19 +72,19 @@ for subdir, dirs, files in os.walk(rootdir):
 
 		language = os.path.abspath(last_folder).split('/')[lang_folder]
 		
-		# data hierachy: /your/path/ol/croco/pro/de/*.conllu
+		# data hierachy: /your/path/preprocessed/croco/pro/de/*.conllu
 		
 		# this collects counts for every sentence in a document
 		# prepare for writing metadata:
 		lang, korp, status = get_meta(last_folder)
-		meta_str = '_'.join(get_meta(last_folder)) # lang, register, korp, status
+		meta_str = '_'.join(get_meta(last_folder)) # lang, korp, status
 		
 		if i % 20 == 0:
 			print('I have processed %s files from %s' % (i, meta_str.upper()), file=sys.stderr)
 		
 		# don't forget the filename
 		doc = os.path.splitext(os.path.basename(last_folder + filepath))[0]  # without extention
-		
+
 		data = open(filepath).readlines()
 		
 		corp_id = lang + '_' + status + '_' + korp

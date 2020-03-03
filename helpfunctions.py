@@ -4,14 +4,14 @@
 '''
 this sctipt contains only the lang-independent functions
 '''
-
-from igraph import *
+import os
+from igraph import Graph, arpack_options
 from collections import OrderedDict
 from operator import itemgetter
 import warnings
 warnings.simplefilter("ignore")
 
-lists_path = '/home/your_user_homedir/translationese45/searchlists/'
+lists_path = '/home/youruser/translationese45/searchlists/'
 
 def get_meta(input):
 	# prepare for writing metadata
