@@ -26,7 +26,8 @@ To reproduce the extraction of frequencies for the 45 translationese features fo
 
 The archives contain trees of folders for each language pair, including professional and student translations 
 with their sources as well as the non-translated reference texts used. The folder names are used as class labels by the script.
-Each file contains a preprocessed and UD parsed text in the *.conllu format from the respective subcorpus.
+Each file contains a preprocessed and UD parsed text in the *.conllu format from the respective subcorpus. 
+Note: our subset of the Croco corpus is available on request. 
 
 - Install the necessary dependencies, specifically python igraph-python 0.7.4 library required to extract mean hierarchical distance
 
